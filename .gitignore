@@ -1,0 +1,17 @@
+# caches
+__pycache__/
+
+# logs
+*.log
+
+# env
+.env
+env*/
+venv*/
+
+# vscode
+.vscode/
+setup.cfg
+
+# bdd
+db*
