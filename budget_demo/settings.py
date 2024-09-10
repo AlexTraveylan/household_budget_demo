@@ -42,8 +42,9 @@ SECRET_KEY = (
 )
 
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = (
+    [] if DEBUG is True else ["householdbudgetdemo-production.up.railway.app"]
+)
 
 # Application definition
 
