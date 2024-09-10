@@ -26,15 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 _debug = os.getenv("DEBUG")
-if _debug is None:
-    raise ValueError("DEBUG is not set")
 DEBUG: bool = _debug == "True"
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
 _secret_key = os.getenv("SECRET_KEY")
-if _secret_key is None:
-    raise ValueError("SECRET_KEY is not set")
 SECRET_KEY = (
     _secret_key
     if DEBUG is False
@@ -146,6 +142,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # JWT
 _jwt_secret = os.getenv("JWT_SECRET")
-if _jwt_secret is None:
-    raise ValueError("JWT_SECRET is not set")
 JWT_SECRET = _jwt_secret
